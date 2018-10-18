@@ -68,12 +68,26 @@
 \maketitle
 
 \section{Widoki}
-
-\lstinputlisting{firstline=1, lastline=11}{sql/lab1/widoki.sql}
-\lstinputlisting{firstline=14, lastline=23}{sql/lab1/widoki.sql}
-\lstinputlisting{firstline=26, lastline=32}{sql/lab1/widoki.sql}
-\lstinputlisting{firstline=35, lastline=44}{sql/lab1/widoki.sql}
-\lstinputlisting{firstline=47, lastline=52}{sql/lab1/widoki.sql}
+\subsection{}
+wycieczki\_osoby(kraj,data, nazwa\_wycieczki, imie, nazwisko,status\_rezerwacji)
+\lstinputlisting[firstline=1, lastline=11]{sql/lab1/widoki.sql}
+\subsection{}
+wycieczki\_osoby\_potwierdzone (kraj,data, nazwa\_wycieczki, imie,
+nazwisko,status\_rezerwacji)
+\lstinputlisting[firstline=14, lastline=23]{sql/lab1/widoki.sql}
+\subsection{}
+wycieczki\_przyszle (kraj,data, nazwa\_wycieczki, imie, nazwisko,status\_rezerwacji)
+\lstinputlisting[firstline=26, lastline=32]{sql/lab1/widoki.sql}
+\subsection{}
+wycieczki\_miejsca(kraj,data, nazwa\_wycieczki,liczba\_miejsc, liczba\_wolnych\_miejsc)
+\lstinputlisting[firstline=35, lastline=44]{sql/lab1/widoki.sql}
+\subsection{}
+dostępne\_wyciezki(kraj,data, nazwa\_wycieczki,liczba\_miejsc, liczba\_wolnych\_miejsc)
+\lstinputlisting[firstline=55, lastline=63]{sql/lab1/widoki.sql}
+\subsection{}
+rezerwacje\_do\_anulowania – lista niepotwierdzonych rezerwacji które powinne zostać
+anulowane, rezerwacje przygotowywane są do anulowania na tydzień przed wyjazdem)
+\lstinputlisting[firstline=47, lastline=52]{sql/lab1/widoki.sql}
 
 \section{Procedury}
 
