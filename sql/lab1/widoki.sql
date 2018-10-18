@@ -52,3 +52,14 @@ SELECT
   where CURRENT_DATE - w.data > 0 and CURRENT_DATE - w.data < 7 and r.STATUS = 'N'
 /
 
+create or replace view DOSTEPNE_WYCIECZKI as
+SELECT
+  wm.KRAJ,
+  wm.DATA,
+  wm.NAZWA,
+  wm.LICZBA_MIEJSC,
+  wm.LICZBA_WOLNYCH_MIEJSC
+  FROM wycieczki_miejsca wm
+  where wm.LICZBA_WOLNYCH_MIEJSC > 0 and wm.DATA > CURRENT_DATE
+/
+
