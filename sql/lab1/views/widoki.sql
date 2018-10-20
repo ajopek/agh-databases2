@@ -24,11 +24,16 @@ SELECT
 /
 
 create or replace view WYCIECZKI_PRZYSZLE as
-SELECT
+select
   w.KRAJ,
   w.DATA,
-  w.NAZWA
-  FROM WYCIECZKI w
+  w.NAZWA,
+  o.IMIE,
+  o.NAZWISKO,
+  r.STATUS
+  from REZERWACJE r
+  join wycieczki w on w.ID_WYCIECZKI = r.ID_WYCIECZKI
+  join osoby o on o.ID_OSOBY = r.ID_OSOBY
   where w.DATA > CURRENT_DATE
 /
 
@@ -49,7 +54,7 @@ SELECT
   r.NR_REZERWACJI
   FROM REZERWACJE r
   JOIN WYCIECZKI W on r.ID_WYCIECZKI = W.ID_WYCIECZKI
-  where CURRENT_DATE - w.data > 0 and CURRENT_DATE - w.data < 7 and r.STATUS = 'N'
+  where CURRENT_DATE - w.data < 0 and w.data - CURRENT_DATE < 7 and r.STATUS = 'N'
 /
 
 create or replace view DOSTEPNE_WYCIECZKI as
