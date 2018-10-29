@@ -32,7 +32,7 @@ AS
     CLOSE osoba;
 
     IF osoba_result IS NULL THEN
-      RAISE NO_DATA;
+      RAISE NO_DATA_FOUND;
     END IF;
 
     OPEN uczestnicy;

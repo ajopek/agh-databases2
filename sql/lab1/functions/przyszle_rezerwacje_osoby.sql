@@ -13,7 +13,7 @@ AS
     JOIN wycieczki w ON w.ID_WYCIECZKI = r.ID_WYCIECZKI
     JOIN osoby o ON o.ID_OSOBY = r.ID_OSOBY
     WHERE w.DATA > current_date AND o.ID_OSOBY = person_id;
-  rezerw_osoby_result cur%ROWTYPE;
+  rezerw_osoby_result rezerw_osoby%ROWTYPE;
 
   proc_res UCZESTNICY_WYCIECZKI_ROW :=
     UCZESTNICY_WYCIECZKI_ROW(NULL, NULL, NULL, NULL, NULL, NULL, NULL );
@@ -24,7 +24,7 @@ AS
     CLOSE osoba;
 
     IF osoba_result IS NULL THEN
-      RAISE NO_DATA;
+      RAISE NO_DATA_FOUND;
     END IF;
 
     OPEN rezerw_osoby;

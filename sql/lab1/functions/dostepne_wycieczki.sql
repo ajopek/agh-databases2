@@ -10,18 +10,12 @@ CREATE OR REPLACE TYPE WYCIECZKI_MIEJSCA_TABLE AS TABLE OF WYCIECZKI_MIEJSCA_ROW
 
 CREATE or REPLACE FUNCTION dostepne_wycieczki_proc(
   country in WYCIECZKI.KRAJ%TYPE,
-  data_od in DATE,
-  data_do in DATE
+  od in DATE,
+  do in DATE
 )
-  proc_resURN WYCIECZKI_MIEJSCA_TABLE PIPELINED
+  RETURN WYCIECZKI_MIEJSCA_TABLE PIPELINED
 AS
-  wycieczki_miejscaSOR wycieczka IS
-    SELECT ID_WYCIECZKI
-    FROM WYCIECZKI
-    WHERE KRAJ = country AND DATA BETWEEN data_od AND data_do;
-  wycieczka_res NUMBER;
-
-  wycieczki_miejscaSOR wycieczki_miejsca IS
+  CURSOR wycieczki_miejsca IS
     SELECT
       w.KRAJ,
       w.DATA,
@@ -37,18 +31,23 @@ AS
           SELECT coalesce(count(r.NR_REZERWACJI), 0)
           from REZERWACJE r
           where r.ID_WYCIECZKI = w.ID_WYCIECZKI
-        ) < w.LICZBA_MIEJSC AND w.KRAJ = country and w.DATA BETWEEN data_od AND data_do;
-
+        ) < w.LICZBA_MIEJSC AND w.KRAJ = country and w.DATA BETWEEN od AND do;
   wycieczki_miejsca_res wycieczki_miejsca%ROWTYPE;
-  proc_res WYCIECZKI_MIEJSCA_ROW := WYCIECZKI_MIEJSCA_ROW(NULL, NUL
-L, NULL, NULL, NULL);
+
+  CURSOR wycieczka IS
+    SELECT ID_WYCIECZKI
+    FROM WYCIECZKI
+    WHERE KRAJ = country AND DATA BETWEEN od AND do;
+  wycieczka_res NUMBER;
+
+  proc_res WYCIECZKI_MIEJSCA_ROW := WYCIECZKI_MIEJSCA_ROW(NULL, NULL, NULL, NULL, NULL);
   BEGIN
     OPEN wycieczka;
     fetch wycieczka into wycieczka_res;
     CLOSE wycieczka;
-    
-    IF wycieczka_res IS NULL THEN      
-        RAISE NO_DATA;
+
+    IF wycieczka_res IS NULL THEN
+        RAISE NO_DATA_FOUND;
     END IF;
 
     OPEN wycieczki_miejsca;
