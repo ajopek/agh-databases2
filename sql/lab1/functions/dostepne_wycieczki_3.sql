@@ -1,14 +1,4 @@
-CREATE OR REPLACE TYPE WYCIECZKI_MIEJSCA_ROW AS OBJECT (
-  NAZWA        VARCHAR2(100),
-  KRAJ         VARCHAR2(50),
-  DATA         DATE,
-  LICZBA_MIEJSC NUMBER,
-  LICZBA_WOLNYCH_MIEJSC NUMBER
-);
-
-CREATE OR REPLACE TYPE WYCIECZKI_MIEJSCA_TABLE AS TABLE OF WYCIECZKI_MIEJSCA_ROW;
-
-CREATE or REPLACE FUNCTION dostepne_wycieczki_proc(
+CREATE or REPLACE FUNCTION dostepne_wycieczki_proc_3(
   country in WYCIECZKI.KRAJ%TYPE,
   od in DATE,
   do in DATE
@@ -21,17 +11,11 @@ AS
       w.DATA,
       w.NAZWA,
       w.LICZBA_MIEJSC,
-      w.liczba_miejsc - (
-        SELECT coalesce(count(r.NR_REZERWACJI), 0)
-        from REZERWACJE r
-          where r.ID_WYCIECZKI = w.ID_WYCIECZKI
-      ) as liczba_wolnych_miejsc
+    ---------- MODYFIKACJA ZAD 7 --------------------
+      w.LICZBA_WOLNYCH_MIEJSC
     FROM WYCIECZKI w
-  where (
-          SELECT coalesce(count(r.NR_REZERWACJI), 0)
-          from REZERWACJE r
-          where r.ID_WYCIECZKI = w.ID_WYCIECZKI
-        ) < w.LICZBA_MIEJSC AND w.KRAJ = country and w.DATA BETWEEN od AND do;
+  where w.liczba_wolnych_miejsc > 0 AND w.KRAJ = country and w.DATA BETWEEN od AND do;
+    -------------------------------------------------
   wycieczki_miejsca_res wycieczki_miejsca%ROWTYPE;
 
   CURSOR wycieczka IS
