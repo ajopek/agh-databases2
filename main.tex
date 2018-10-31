@@ -88,7 +88,7 @@ rezerwacje\_do\_anulowania – lista niepotwierdzonych rezerwacji które powinne
 anulowane, rezerwacje przygotowywane są do anulowania na tydzień przed wyjazdem)
 \lstinputlisting[firstline=52, lastline=57]{sql/lab1/views/widoki.sql}
 
-\section{Procedury}
+\section{Procedury pobierające dane}
 
 \subsection{}
 uczestnicy\_wycieczki (id\_wycieczki), procedura ma zwracać podobny zestaw danych jak widok wycieczki\_osoby
@@ -106,7 +106,50 @@ przyszle\_rezerwacje\_osoby(id\_osoby)
 dostepne\_wycieczki(kraj, data\_od, data\_do)
 \lstinputlisting{sql/lab1/functions/dostepne_wycieczki.sql}
 
-\section{Triggery}
+\section{Procedury modyfikujące dane}
+\subsection{}
+dodaj\_rezerwacje(id\_wycieczki, id\_osoby), procedura powinna kontrolować czy wycieczka
+jeszcze się nie odbyła, i czy sa wolne miejsca
+\lstinputlisting{sql/lab1/functions/dodaj_rezerwacje.sql}
+\subsection{}
+zmien\_status\_rezerwacji(id\_rezerwacji, status), procedura kontrolować czy możliwa jest
+zmiana statusu, np. zmiana statusu już anulowanej wycieczki (przywrócenie do stanu
+aktywnego nie zawsze jest możliwe)
+\lstinputlisting{sql/lab1/functions/zmien_status_rezerwacji.sql}
+\subsection{}
+zmien\_liczbe\_miejsc(id\_wycieczki, liczba\_miejsc), nie wszystkie zmiany liczby miejsc są
+dozwolone, nie można zmniejszyć liczby miesc na wartość poniżej liczby zarezerwowanych
+miejsc
+\lstinputlisting{sql/lab1/functions/zmien_liczbe_miejsc.sql}
+
+\section{Tabela dziennikująca zmiany statusu rezerwacji}
+
+
+\section{Redundantne pole liczba\_wolnych\_miejsc}
+\subsection{}
+Dodanie pola liczba\_wolnych\_miejsc
+\lstinputlisting{sql/lab1/views/add_redundant_field.sql}
+\subsection{}
+Widoki
+\lstinputlisting{sql/lab1/views/wycieczki_osoby_2.sql}
+\lstinputlisting{sql/lab1/views/wycieczki_osoby_potwierdzone_2.sql}
+\lstinputlisting{sql/lab1/views/wycieczki_osoby_przyszle_2.sql}
+\lstinputlisting{sql/lab1/views/wycieczki_miejsca_2.sql}
+\lstinputlisting{sql/lab1/views/dostepne_wycieczki_2.sql}
+\subsection{}
+Procedura przelicz
+\lstinputlisting{sql/lab1/functions/przelicz.sql}
+\subsection{}
+Procedury pobierajace dane
+\lstinputlisting{sql/lab1/functions/dodaj_rezerwacje_3.sql}
+\lstinputlisting{sql/lab1/functions/zmien_status_rezerwacji_3.sql}
+\lstinputlisting{sql/lab1/functions/zmien_liczbe_miejsc_3.sql}
+\subsection{}
+Procedury modyfikujące dane
+\lstinputlisting{sql/lab1/functions/dostepne_wycieczki_proc_2.sql}
+\section{Triggery zapisujące do dziennika rezerwacji}
+
+\section{Triggery obsługujące redundantne pole liczba\_wolnych\_miejsc}
 
 %\lstinputlisting{firstline=1, lastline=10}{sql/lab1/triggery.sql}
 
