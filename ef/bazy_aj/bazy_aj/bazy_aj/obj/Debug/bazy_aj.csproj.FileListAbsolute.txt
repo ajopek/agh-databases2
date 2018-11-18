@@ -1,0 +1,35 @@
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\bazy_aj.exe.config
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\bazy_aj.exe
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\bazy_aj.pdb
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\EntityFramework.dll
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\EntityFramework.xml
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.exe
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.pdb
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.InitialCreate.resources
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.csproj.GenerateResource.Cache
+c:\users\student\documents\visual studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddDescription.resources
+C:\Users\student\Documents\Visual Studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddCustomer.resources
+C:\Users\student\Documents\Visual Studio 2012\Projects\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddCustomer1.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\bazy_aj.exe.config
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.exe
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.pdb
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\bazy_aj.exe
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\bazy_aj.pdb
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\EntityFramework.dll
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\EntityFramework.xml
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.csprojResolveAssemblyReference.cache
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.InitialCreate.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddDescription.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddCustomer.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.AddCustomer1.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.csproj.GenerateResource.Cache
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.Money.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.CategoryForm.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Properties.Resources.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Form1.resources
+C:\Users\student\Downloads\bazy_aj\bazy_aj\bazy_aj\obj\Debug\bazy_aj.Migrations.cartapp.resources
