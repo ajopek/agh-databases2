@@ -1,0 +1,20 @@
+Sun Nov 25 11:12:48 CET 2018 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sun Nov 25 11:12:53 CET 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-4a5b-7c8e-ffffc118745c 
+on database directory /home/artur/sem5/agh-databases2/IJopekJPAPractice/db-derby-10.14.2.0-bin/bin/IJopekJPA with class loader sun.misc.Launcher$AppClassLoader@355da254 
+Loaded from file:/home/artur/sem5/agh-databases2/IJopekJPAPractice/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-8u181-b13-1ubuntu0.16.04.1-b13
+user.dir=/home/artur/sem5/agh-databases2/IJopekJPAPractice/db-derby-10.14.2.0-bin/bin
+os.name=Linux
+os.arch=amd64
+os.version=4.15.0-39-generic
+derby.system.home=/home/artur/sem5/agh-databases2/IJopekJPAPractice/db-derby-10.14.2.0-bin/bin
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Nov 25 11:56:54 CET 2018: Shutting down Derby engine
+----------------------------------------------------------------
+Sun Nov 25 11:56:54 CET 2018:
+Shutting down instance a816c00e-0167-4a5b-7c8e-ffffc118745c on database directory /home/artur/sem5/agh-databases2/IJopekJPAPractice/db-derby-10.14.2.0-bin/bin/IJopekJPA with class loader sun.misc.Launcher$AppClassLoader@355da254 
+----------------------------------------------------------------
